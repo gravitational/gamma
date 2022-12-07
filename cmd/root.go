@@ -28,7 +28,7 @@ func init() {
 	cobra.AddTemplateFunc("green", color.Green)
 	cobra.AddTemplateFunc("logo", logo)
 
-	rootCmd.AddCommand(deploy.Command)
+	rootCmd.AddCommand(build.Command)
 	rootCmd.AddCommand(deploy.Command)
 
 	rootCmd.SetHelpTemplate(`{{ logo }}
