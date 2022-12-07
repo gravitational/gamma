@@ -1,13 +1,13 @@
 package main
 
 import (
-  "os"
+	"os"
 
-  "github.com/gravitational/gamma/cmd"
+	"github.com/gravitational/gamma/cmd"
 )
 
 func main() {
-  if err := cmd.Execute(); err != nil {
-    os.Exit(1)
-  }
+	if err := cmd.Execute(); err != nil {
+		os.Exit(1)
+	}
 }
