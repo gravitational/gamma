@@ -1,0 +1,16 @@
+name: Gamma
+author: Gravitational, Inc.
+description: Build & deploy a monorepo of GitHub Actions into individual repos
+
+inputs:
+  version:
+    description: The version of Gamma to install. Defaults to latest.
+    required: false
+
+runs:
+  using: node16
+  main: action/dist/index.js
+
+branding:
+  color: purple
+  icon: terminal
