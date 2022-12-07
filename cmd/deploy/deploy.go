@@ -98,7 +98,7 @@ var Command = &cobra.Command{
 		if len(actionsToBuild) == 0 {
 			logger.Warning("no actions need building, exiting")
 
-			os.Exit(0)
+			return
 		}
 
 		var hasError bool
