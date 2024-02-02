@@ -8,54 +8,54 @@ import (
 )
 
 var (
-	info    = color.Magenta("ℹ")
-	success = color.Green("✔")
-	warning = color.Yellow("⚠")
-	error   = color.Red("✖")
+	infoColor    = color.Magenta("ℹ")
+	successColor = color.Green("✔")
+	warningColor = color.Yellow("⚠")
+	errorColor   = color.Red("✖")
 )
 
 func Info(message any) {
-	fmt.Printf("%s %s\n", info, message)
+	fmt.Printf("%s %s\n", infoColor, message)
 }
 
 func Infof(format string, a ...any) {
-	fmt.Printf("%s ", info)
+	fmt.Printf("%s ", infoColor)
 	fmt.Printf(format, a...)
 	fmt.Print("\n")
 }
 
 func Success(message any) {
-	fmt.Printf("%s %s\n", success, message)
+	fmt.Printf("%s %s\n", successColor, message)
 }
 
 func Successf(format string, a ...any) {
-	fmt.Printf("%s ", success)
+	fmt.Printf("%s ", successColor)
 	fmt.Printf(format, a...)
 	fmt.Print("\n")
 }
 
 func Warning(message any) {
-	fmt.Printf("%s %s\n", warning, message)
+	fmt.Printf("%s %s\n", warningColor, message)
 }
 
 func Warningf(format string, a ...any) {
-	fmt.Printf("%s ", warning)
+	fmt.Printf("%s ", warningColor)
 	fmt.Printf(format, a...)
 	fmt.Print("\n")
 }
 
 func Error(message any) {
-	fmt.Printf("%s %s\n", error, message)
+	fmt.Printf("%s %s\n", errorColor, message)
 }
 
 func Errorf(format string, a ...any) {
-	fmt.Printf("%s ", error)
+	fmt.Printf("%s ", errorColor)
 	fmt.Printf(format, a...)
 	fmt.Print("\n")
 }
 
 func Fatal(message any) {
-	fmt.Printf("%s %s\n", error, message)
+	fmt.Printf("%s %s\n", errorColor, message)
 	os.Exit(1)
 }
 
