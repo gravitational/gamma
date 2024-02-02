@@ -156,7 +156,7 @@ func (r *Runs) UnmarshalYAML(value *yaml.Node) error {
 
 		return nil
 
-	case "node12", "node16":
+	case "node12", "node16", "node20":
 		var javascriptRun JavascriptRun
 
 		if err := value.Decode(&javascriptRun); err != nil {
