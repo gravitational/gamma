@@ -5,14 +5,13 @@ import (
 	"strings"
 	"time"
 
-	"github.com/jedib0t/go-pretty/v6/text"
-	"github.com/spf13/cobra"
-
 	"github.com/gravitational/gamma/internal/action"
 	"github.com/gravitational/gamma/internal/git"
 	"github.com/gravitational/gamma/internal/logger"
 	"github.com/gravitational/gamma/internal/utils"
 	"github.com/gravitational/gamma/internal/workspace"
+	"github.com/jedib0t/go-pretty/v6/text"
+	"github.com/spf13/cobra"
 )
 
 var outputDirectory string
@@ -23,7 +22,7 @@ var Command = &cobra.Command{
 	Use:   "deploy",
 	Short: "Builds and deploys actions",
 	Long:  `Builds and deploys all the actions that have changes.`,
-	Run: func(cmd *cobra.Command, args []string) {
+	Run: func(_ *cobra.Command, _ []string) {
 		started := time.Now()
 
 		if workingDirectory == "the current working directory" { // this is the default value from the flag

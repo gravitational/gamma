@@ -5,12 +5,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/jedib0t/go-pretty/v6/text"
-	"github.com/spf13/cobra"
-
 	"github.com/gravitational/gamma/internal/logger"
 	"github.com/gravitational/gamma/internal/utils"
 	"github.com/gravitational/gamma/internal/workspace"
+	"github.com/jedib0t/go-pretty/v6/text"
+	"github.com/spf13/cobra"
 )
 
 var outputDirectory string
@@ -20,7 +19,7 @@ var Command = &cobra.Command{
 	Use:   "build",
 	Short: "Builds all the actions in the monorepo",
 	Long:  `Builds all the actions in the monorepo and puts them into the specified output directory, separated by repo.`,
-	Run: func(cmd *cobra.Command, args []string) {
+	Run: func(_ *cobra.Command, _ []string) {
 		started := time.Now()
 
 		if workingDirectory == "the current working directory" { // this is the default value from the flag
